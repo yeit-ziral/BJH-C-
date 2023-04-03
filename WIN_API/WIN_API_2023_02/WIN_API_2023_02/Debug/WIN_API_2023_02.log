@@ -1,6 +1,7 @@
-﻿  WIN_API_2023_02.cpp
-E:\BJH\과제\WIN_API_2023_02\WIN_API_2023_02\WIN_API_2023_02.cpp(325,46): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\BJH\과제\WIN_API_2023_02\WIN_API_2023_02\WIN_API_2023_02.cpp(325,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\BJH\과제\WIN_API_2023_02\WIN_API_2023_02\WIN_API_2023_02.cpp(325,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\BJH\과제\WIN_API_2023_02\WIN_API_2023_02\WIN_API_2023_02.cpp(325,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  WIN_API_2023_02.vcxproj -> E:\BJH\과제\WIN_API_2023_02\Debug\WIN_API_2023_02.exe
+﻿  framework.cpp
+  WIN_API_2023_02.cpp
+E:\BJH\SGA-\WIN_API\WIN_API_2023_02\WIN_API_2023_02\WIN_API_2023_02.cpp(325,46): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\WIN_API_2023_02\WIN_API_2023_02\WIN_API_2023_02.cpp(325,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\WIN_API_2023_02\WIN_API_2023_02\WIN_API_2023_02.cpp(325,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\WIN_API_2023_02\WIN_API_2023_02\WIN_API_2023_02.cpp(325,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  WIN_API_2023_02.vcxproj -> E:\BJH\SGA-\WIN_API\WIN_API_2023_02\Debug\WIN_API_2023_02.exe
