@@ -160,6 +160,7 @@
     <ClInclude Include="Scenes\Scene.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Math\Vector2.h" />
+    <ClInclude Include="Types.h" />
     <ClInclude Include="WIN_API_202302.h" />
   </ItemGroup>
   <ItemGroup>

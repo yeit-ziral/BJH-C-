@@ -13,6 +13,7 @@
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
+#include <cmath>
 #include <math.h>
 #include <vector>
 #include <unordered_map>
@@ -22,6 +23,8 @@
 #include <memory>
 
 using namespace std;
+
+#include "Types.h"
 
 // Math
 #include "Math/Vector2.h"
@@ -33,3 +36,5 @@ using namespace std;
 
 // Program
 #include "Program/Program.h"
+
+extern Vector2 mousePos;

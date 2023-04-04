@@ -4,7 +4,13 @@
 PaintScene::PaintScene()
 {
 	_circle = make_shared<CircleCollider>(Vector2(300.0f, 300.0f), 50.0f);
-	_rectangle = make_shared<RectCollider>(Vector2(550.f, 250.0f), Vector2(650.0f, 250.0f), Vector2(550.0f, 350.0f), Vector2(650.0f, 350.0f));
+	
+	//_circleMouse = make_shared<CircleCollider>(Vector2(0.0f, 0.0f), 70.0f);
+
+	_rectMouse = make_shared<RectCollider>(Vector2(0.0f, 0.0f), Vector2(150, 150));
+
+	_rectangle = make_shared<RectCollider>(Vector2(500.0f, 300.0f), Vector2(200, 250));
+	
 }
 
 PaintScene::~PaintScene()
@@ -13,15 +19,41 @@ PaintScene::~PaintScene()
 
 void PaintScene::Update()
 {
-	if (GetAsyncKeyState('A'))
+	//Vector2 lerpResult = LERP(_circleMouse->GetCenter(), mousePos, 0.1f);
+	Vector2 lerpResult = LERP(_rectMouse->GetCenter(), mousePos, 0.3f);
+
+	//_circleMouse->SetCenter(lerpResult);
+	_rectMouse->SetCenter(lerpResult);
+
+	/*if (_circle->IsCollision(_circleMouse))
 	{
-		_circle->MoveCenter(Vector2(-1, -1).NormalVector2() * _speed);
-		_rectangle->MoveSquare(Vector2(-1, -1).NormalVector2() * _speed);
+		_circle->SetRed();
+		_circleMouse->SetRed();
 	}
-	if (GetAsyncKeyState('D'))
+	else
 	{
-		_circle->MoveCenter(Vector2(1, 1).NormalVector2() * _speed);
-		_rectangle->MoveSquare(Vector2(1, 1).NormalVector2() * _speed);
+		_circle->SetGreen();
+		_circle->SetGreen();
+	}*/
+	if (_rectangle->IsCollision(_rectMouse))
+	{
+		_rectangle->SetRed();
+		_rectMouse->SetRed();
+	}
+	else
+	{
+		_rectangle->SetGreen();
+		_rectMouse->SetGreen();
+	}
+	if (_circle->IsCollision(_rectMouse))
+	{
+		_circle->SetRed();
+		_rectMouse->SetRed();
+	}
+	else
+	{
+		_circle->SetGreen();
+		_rectMouse->SetGreen();
 	}
 
 	_circle->Update();
@@ -31,5 +63,7 @@ void PaintScene::Update()
 void PaintScene::Render(HDC hdc)
 {
 	_circle->Render(hdc);
+	//_circleMouse->Render(hdc);
+	_rectMouse->Render(hdc);
 	_rectangle->Render(hdc);
 }
