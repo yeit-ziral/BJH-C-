@@ -1,7 +1,25 @@
-﻿  LineScene.cpp
+﻿  framework.cpp
+  LineScene.cpp
+  Collider.cpp
+  Line.cpp
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\Line.cpp(10,32): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\Line.cpp(10,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\Line.cpp(11,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\Line.cpp(11,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CircleCollider.cpp
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\CircleCollider.cpp(29,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\CircleCollider.cpp(29,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\CircleCollider.cpp(29,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\CircleCollider.cpp(29,15): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  RectCollider.cpp
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\RectCollider.cpp(35,35): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\RectCollider.cpp(35,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\RectCollider.cpp(35,23): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\SGA-\WIN_API\HW - day37\WIN_API_202302\Math\RectCollider.cpp(35,17): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   PaintScene.cpp
   Program.cpp
   Scene.cpp
+  Vector2.cpp
   WIN_API_202302.cpp
   코드를 생성하고 있습니다...
-  WIN_API_202302.vcxproj -> E:\BJH\과제\class 37\x64\Debug\WIN_API_202302.exe
+  WIN_API_202302.vcxproj -> E:\BJH\SGA-\WIN_API\HW - day37\x64\Debug\WIN_API_202302.exe
