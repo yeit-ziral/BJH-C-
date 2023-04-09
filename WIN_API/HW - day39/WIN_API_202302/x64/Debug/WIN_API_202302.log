@@ -1,0 +1,27 @@
+﻿  CannonScene.cpp
+  LineCollisionScene.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(149,77): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2006): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,Vector2,int>(_Ty &,Vector2 &&,int &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2725): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Vector2,int>(Vector2 &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Vector2,int>(Vector2 &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+E:\BJH\과제\HW - day38\WIN_API_202302\Scenes\LineCollisionScene.cpp(9): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<CircleCollider> std::make_shared<CircleCollider,Vector2,int>(Vector2 &&,int &&)'에 대한 참조를 확인하세요.
+  Program.cpp
+  WIN_API_202302.cpp
+  코드를 생성하고 있습니다...
+  WIN_API_202302.vcxproj -> E:\BJH\과제\HW - day38\x64\Debug\WIN_API_202302.exe
