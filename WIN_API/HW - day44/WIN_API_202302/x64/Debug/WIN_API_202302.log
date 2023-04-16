@@ -1,0 +1,116 @@
+﻿  framework.cpp
+  CircleCollider.cpp
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\CircleCollider.cpp(31,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\CircleCollider.cpp(31,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\CircleCollider.cpp(31,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\CircleCollider.cpp(31,15): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Collider.cpp
+  Line.cpp
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\Line.cpp(30,32): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\Line.cpp(30,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\Line.cpp(31,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\Line.cpp(31,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  RectCollider.cpp
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\RectCollider.cpp(30,35): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\RectCollider.cpp(30,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\RectCollider.cpp(30,23): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Math\RectCollider.cpp(30,17): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Vector2.cpp
+  Arkanoid.cpp
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Arkanoid\Arkanoid.cpp(10,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Arkanoid\Arkanoid.cpp(14,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Bar.cpp
+  Brick.cpp
+  Bullet.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(149,77): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2006): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,Vector2,int>(_Ty &,Vector2 &&,int &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2725): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Vector2,int>(Vector2 &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Vector2,int>(Vector2 &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Cannon\Bullet.cpp(6): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<CircleCollider> std::make_shared<CircleCollider,Vector2,int>(Vector2 &&,int &&)'에 대한 참조를 확인하세요.
+  Cannon.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(149,77): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2006): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,Vector2&,int>(_Ty &,Vector2 &,int &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2725): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Vector2&,int>(Vector2 &,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Vector2&,int>(Vector2 &,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Cannon\Cannon.cpp(7): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<CircleCollider> std::make_shared<CircleCollider,Vector2&,int>(Vector2 &,int &&)'에 대한 참조를 확인하세요.
+  Maze.cpp
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Maze.cpp(8,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Maze.cpp(12,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Maze.cpp(56,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Maze.cpp(58,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Maze.cpp(70,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Maze.cpp(72,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Maze.cpp(107,17): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Maze.cpp(109,17): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+  MazeBlock.cpp
+  Mazerunner.cpp
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Mazerunner.cpp(73,27): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Mazerunner.cpp(73,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Mazerunner.cpp(82,32): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\BJH\과제\Class - day43\WIN_API_202302\Object\Maze\Mazerunner.cpp(82,23): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Program.cpp
+  ArkanoidScene.cpp
+  CannonScene.cpp
+  LineCollisionScene.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(149,77): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2006): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,Vector2,int>(_Ty &,Vector2 &&,int &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2725): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Vector2,int>(Vector2 &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Vector2,int>(Vector2 &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+E:\BJH\과제\Class - day43\WIN_API_202302\Scenes\LineCollisionScene.cpp(9): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<CircleCollider> std::make_shared<CircleCollider,Vector2,int>(Vector2 &&,int &&)'에 대한 참조를 확인하세요.
+  LineScene.cpp
+  MazeScene.cpp
+  PaintScene.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Scene.cpp
+  WIN_API_202302.cpp
+  코드를 생성하고 있습니다...
+  WIN_API_202302.vcxproj -> E:\BJH\과제\Class - day43\x64\Debug\WIN_API_202302.exe
