@@ -15,12 +15,14 @@ using namespace std;
 // 그래프를 쓰는 이유
 
 vector<vector<bool>> adjacent2;
-vector<bool> visited;
+vector<bool> discovered;
+vector<int> parent;
 
 void CreateGraphByMatrix()
 {
     adjacent2 = vector<vector<bool>>(7, vector<bool>(7, false));
-    visited = vector<bool>(7, false);
+    discovered = vector<bool>(7, false);
+    parent = vector<int>(7, -1);
 
     //    0  1  2  3  4  5  6
     // 0  T  T  T  F  T  F  F
@@ -60,60 +62,68 @@ void CreateGraphByMatrix()
 
 void BFS(int start)
 {
-    queue<int> q;
-    visited[start] = true;
-    q.push(start);
+    queue<int> queue;
+    parent[start] = start;
 
-    cout << start << "를 방문했습니다." << endl;
+    queue.push(start);
 
-    while (!q.empty())
+    while (true)
     {
-        int here = q.front();
-        q.pop();
+        if (queue.empty() == true)
+            break;
 
-        cout << here << "를 방문했습니다." << endl;
+        int here = queue.front();
+        queue.pop();
 
-        for (int there = 0; there < adjacent2.size(); there++)
+        for (int there = 0; there < 7; there++)
         {
-            // 갈곳이 출발점과 동일하면 다음으로
-            if (here == there)
-                continue;
-
-            // 인접해있는가?
             if (adjacent2[here][there] == false)
                 continue;
 
-            // 방문여부
-            if (visited[there] == true)
+            if (discovered[there])
                 continue;
 
-            // 갈곳을 찾은경우
-            visited[there] = true;
-            q.push(there);
+            queue.push(there);
+            parent[there] = here;
+            discovered[there] = true;
+            cout << there << "방문!!" << endl;
         }
     }
 }
 
-int BfsAll()
-{
-    int count = 0;
-
-    for (int start = 0; start < 7; start++)
-    {
-        if (visited[start] == false)
-        {
-            BFS(start);
-            count++;
-        }
-    }
-
-    return count;
-}
+//int BfsAll()
+//{
+//    int count = 0;
+//
+//    for (int start = 0; start < 7; start++)
+//    {
+//        if (discovered[start] == false)
+//        {
+//            BFS(start);
+//            count++;
+//        }
+//    }
+//
+//    return count;
+//}
 
 int main()
 {
     CreateGraphByMatrix();
+
     BFS(0);
-    int count = BfsAll();
+
+    int targetNode = 3;
+
+    while (true)
+    {
+        cout << targetNode << "의 부모 : " << parent[targetNode] << endl;
+
+        if (parent[targetNode] == targetNode)
+            break;
+
+        targetNode = parent[targetNode];
+    }
+
     return 0;
 }

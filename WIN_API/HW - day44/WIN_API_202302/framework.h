@@ -40,14 +40,11 @@ using namespace std;
 // Object
 #include "Object/Cannon/Bullet.h"
 #include "Object/Cannon/Cannon.h"
+#include "Object/Cannon/Brick.h"
 
 #include "Object/Maze/MazeBlock.h"
 #include "Object/Maze/Maze.h"
 #include "Object/Maze/Mazerunner.h"
-
-#include "Object/Arkanoid/Brick.h"
-#include "Object/Arkanoid/Bar.h"
-#include "Object/Arkanoid/Arkanoid.h"
 
 // Scene
 #include "Scenes/Scene.h"

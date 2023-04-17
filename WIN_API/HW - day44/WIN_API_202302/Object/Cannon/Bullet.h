@@ -15,10 +15,6 @@ public:
 
     shared_ptr<Collider> GetCollider() { return _collider; }
     bool IsCollision(shared_ptr<class Cannon> canon);
-    
-    void AttackBrick(shared_ptr<class Brick> brick);
-
-    bool IsCollision(shared_ptr<class Brick> brick);
 
 private:
     bool _isActive = false;
@@ -26,6 +22,5 @@ private:
     Vector2 _direction = Vector2(0.0f, 0.0f);
 
     shared_ptr<Collider> _collider;
-    shared_ptr<RectCollider> _brick;
 };
 

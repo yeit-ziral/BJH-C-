@@ -26,16 +26,6 @@ void Bullet::Update()
     if (_collider->GetCenter().x < 0.0f || _collider->GetCenter().x > WIN_WIDTH)
         _direction.x *= -1;
 
-    //벽돌과 부딫혔을 때
-    if (_collider->IsCollision(_brick))
-    {
-        if (_collider->GetCenter().y > _brick->Bottom() || _collider->GetCenter().y < _brick->Top())
-            _direction.y *= -1;
-
-        if (_collider->GetCenter().x > _brick->Right() || _collider->GetCenter().x < _brick->Left())
-            _direction.x *= -1;
-    }
-
     _collider->Update();
 }
 void Bullet::Render(HDC hdc)
@@ -57,21 +47,6 @@ bool Bullet::IsCollision(shared_ptr<class Cannon> canon)
     if (_collider->IsCollision(canon->GetCollider()))
     {
         return true;
-    }
-    return false;
-}
-
-void Bullet::AttackBrick(shared_ptr<class Brick> brick)
-{
-    brick->Attacked();
-}
-
-bool Bullet::IsCollision(shared_ptr<class Brick> brick)
-{
-    if (_collider->IsCollision(brick->GetCollider()))
-    {
-        return true;
-        AttackBrick(brick);
     }
     return false;
 }

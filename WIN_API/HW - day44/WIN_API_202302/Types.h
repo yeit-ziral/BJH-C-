@@ -5,10 +5,10 @@
 #define PI 3.141592
 #define GRAVITY 0.03
 
-#define WIN_WIDTH 720
-#define WIN_HEIGHT 1280
-#define CENTER_X 360
-#define CENTER_Y 214
+#define WIN_WIDTH 1280
+#define WIN_HEIGHT 720
+#define CENTER_X 640
+#define CENTER_Y 360
 
 #define WHITE		RGB(255, 255, 255)
 #define RED			RGB(255, 0, 0)

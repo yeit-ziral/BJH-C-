@@ -15,12 +15,12 @@ using namespace std;
 // 그래프를 쓰는 이유
 
 vector<vector<bool>> adjacent2;
-vector<bool> visited;
+vector<bool> discovered;
 
 void CreateGraphByMatrix()
 {
     adjacent2 = vector<vector<bool>>(7, vector<bool>(7, false));
-    visited = vector<bool>(7, false);
+    discovered = vector<bool>(7, false);
 
     //    0  1  2  3  4  5  6
     // 0  T  T  T  F  T  F  F
@@ -60,9 +60,9 @@ void CreateGraphByMatrix()
 
 void DFS(int start)
 {
-    if (visited[start])
+    if (discovered[start])
         return;
-    visited[start] = true;
+    discovered[start] = true;
     cout << start << "를 방문했습니다." << endl;
 
     for (int there = 0; there < adjacent2.size(); there++)
@@ -76,7 +76,7 @@ void DFS(int start)
             continue;
 
         // 방문여부
-        if (visited[there] == true)
+        if (discovered[there] == true)
             continue;
 
         // 갈곳을 찾은경우
@@ -90,61 +90,9 @@ int DfsAll()
 
     for (int start = 0; start < 7; start++)
     {
-        if (visited[start] == false)
+        if (discovered[start] == false)
         {
             DFS(start);
-            count++;
-        }
-    }
-
-    return count;
-}
-
-void BFS(int start)
-{
-    queue<int> q;
-    visited[start] = true;
-    q.push(start);
-
-    cout << start << "를 방문했습니다." << endl;
-
-    while (!q.empty())
-    {
-        int here = q.front();
-        q.pop();
-
-        cout << here << "를 방문했습니다." << endl;
-
-        for (int there = 0; there < adjacent2.size(); there++)
-        {
-            // 갈곳이 출발점과 동일하면 다음으로
-            if (here == there)
-                continue;
-
-            // 인접해있는가?
-            if (adjacent2[here][there] == false)
-                continue;
-
-            // 방문여부
-            if (visited[there] == true)
-                continue;
-
-            // 갈곳을 찾은경우
-            visited[there] = true;
-            q.push(there);
-        }
-    }
-}
-
-int BfsAll()
-{
-    int count = 0;
-
-    for (int start = 0; start < 7; start++)
-    {
-        if (visited[start] == false)
-        {
-            BFS(start);
             count++;
         }
     }
@@ -156,7 +104,6 @@ int DFS()
 {
     CreateGraphByMatrix();
     DFS(0);
-    BFS(0);
     int count = DfsAll();
     return 0;
 }

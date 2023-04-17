@@ -3,10 +3,13 @@
 
 Mazerunner::Mazerunner(shared_ptr<Maze> maze)
 	: _maze(maze)
-	, _footPrint(maze->Start())
 	, _pos(maze->Start())
 {
-	LeftHand();
+	//LeftHand();
+	// DFS
+	_visited = vector<vector<bool>>(maze->GetY(), vector<bool>(maze->GetX(), false));
+	//DFS(_pos);
+	BFS(_pos);
 }
 
 Mazerunner::~Mazerunner()
@@ -42,7 +45,6 @@ void Mazerunner::Update()
 		_footPrint = _path[_pathIndex - 2];
 		_maze->GetBlock((int)_footPrint.y, (int)_footPrint.x)->SetType(MazeBlock::BlockType::PLAYER);
 	}*/
-	
 }
 
 void Mazerunner::LeftHand()
@@ -52,12 +54,16 @@ void Mazerunner::LeftHand()
 	_direction = Dir::DIR_UP;
 	_path.push_back(pos);
 
-	Vector2 frontPos[4] =
+	Vector2 frontPos[8] =
 	{
+		Vector2(1,1),
 		Vector2(0,-1), // UP
 		Vector2(1,0), // Right
 		Vector2(0,1), // Down
-		Vector2(-1,0) // Left
+		Vector2(-1,0), // Left
+		Vector2(-1, 1),
+		Vector2(1, -1),
+		Vector2(-1, -1)
 	};
 
 	while (pos != endPos)
@@ -72,7 +78,6 @@ void Mazerunner::LeftHand()
 		Vector2 oldGo = pos + oldDirVector2;
 		if (Cango(newGo.y, newGo.x))
 		{
-			_footPrint = pos;
 			_direction = static_cast<Dir>(newDir);
 			pos += newDirVector2;
 			_path.push_back(pos);
@@ -81,7 +86,6 @@ void Mazerunner::LeftHand()
 		// 현재 바라보는 방향으로 전진할 수 있는지 확인
 		else if (Cango(oldGo.y, oldGo.x))
 		{
-			_footPrint = pos;
 			pos += oldDirVector2;
 			_path.push_back(pos);
 		}
@@ -114,6 +118,116 @@ void Mazerunner::LeftHand()
 	}
 
 	std::reverse(_path.begin(), _path.end());
+}
+
+void Mazerunner::DFS(Vector2 here)
+{
+	if (_visited[(int)here.y][(int)here.x] == true)
+		return;
+
+	Vector2 endPos = _maze->End();
+
+	if (_visited[endPos.y][endPos.x] == true)
+		return;
+
+	_visited[(int)here.y][(int)here.x] = true;
+	_path.push_back(here);
+
+	Vector2 frontPos[8] =
+	{
+		Vector2(1,1),
+		Vector2(0,-1), // UP
+		Vector2(1,0), // Right
+		Vector2(0,1), // Down
+		Vector2(-1,0), // Left
+		Vector2(-1, 1),
+		Vector2(1, -1),
+		Vector2(-1, -1)
+	};
+
+	for (int i = 0; i < 8; i++)
+	{
+		Vector2 there = here + frontPos[i];
+
+		if (_visited[there.y][there.x] == true)
+			continue;
+
+		if (Cango(there.y, there.x) == false)
+			continue;
+
+		DFS(there);
+	}
+}
+
+void Mazerunner::BFS(Vector2 start)
+{
+	Vector2 endPos = _maze->End();
+
+	if (_visited[endPos.y][endPos.x] == true)
+		return;
+
+	_parent[(int)start.y][(int)start.x] = start;
+
+	_discovered[(int)start.y][(int)start.x] = true;
+
+	_queue.push(start);
+
+	Vector2 frontPos[8] =
+	{
+		Vector2(1,1),
+		Vector2(0,-1), // UP
+		Vector2(1,0), // Right
+		Vector2(0,1), // Down
+		Vector2(-1,0), // Left
+		Vector2(-1, 1),
+		Vector2(1, -1),
+		Vector2(-1, -1)
+	};
+
+	while (!_queue.empty())
+	{
+		Vector2 here = _queue.front();
+
+		_queue.pop();
+
+		if (_discovered[endPos.y][endPos.x])
+			break;
+
+		for (int i = 0; i < 8; i++)
+		{
+			Vector2 there = here + frontPos[i];
+
+			if (_discovered[there.y][there.x])
+				continue;
+
+			if (Cango(there.y, there.x) == false)
+				continue;
+
+			_queue.push(there);
+			_discovered[there.y][there.x] = true;
+			_parent[there.y][there.x] = here;
+		}
+	}
+
+	Vector2 targetNode = endPos;
+
+	list <Vector2> termPath;
+
+	termPath.push_front(endPos);
+
+	while (true)
+	{
+		if (_parent[targetNode.y][targetNode.x] == targetNode)
+			break;
+
+		targetNode = _parent[targetNode.y][targetNode.x];
+		termPath.push_front(targetNode);
+	}
+
+	for (auto iter : termPath)
+	{
+		_path.push_back(iter);
+	}
 }
 
 bool Mazerunner::Cango(int y, int x)

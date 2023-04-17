@@ -8,6 +8,10 @@ public:
 	void Update();
 
 	void LeftHand();
+	void DFS(Vector2 here);
+
+	void BFS(Vector2 start);
+
 	bool Cango(int y, int x);
 
 private:
@@ -16,8 +20,16 @@ private:
 	Vector2 _pos;
 	Dir _direction = Dir::DIR_UP;
 
-	Vector2 _footPrint;
 	vector<Vector2> _path;
+
+	// DFS
+	vector<vector<bool>> _visited;
+
+	// BFS
+	queue<Vector2> _queue;
+	vector<vector<bool>> _discovered;
+	vector<vector<Vector2>> _parent;
+
 	int _pathIndex = 0;
 	float _time = 0.0f;
 };
